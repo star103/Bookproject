@@ -1,0 +1,95 @@
+.page-body-container{
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*background-color: #6697C2;*/
+}
+.inputs{
+    margin-top: 30px;
+}
+.inputs input{
+    display: block;
+    width: 90%;
+    height: 50px;
+    padding-left: 20px;
+    margin: auto;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #4ACF78;
+}
+.inputs i{
+    position: relative;
+    top: 33px;
+    left: 10px;
+}
+.inputs a{
+    display: block;
+    float: right;
+    margin-top: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.inputs+button{
+    display: block;
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: auto;
+    border: none;
+    outline: none;
+    background-color: #4ACF78;
+    color: #fff;
+    font-size: 18px;
+}
+.friendInfo{
+    margin-top: 60%;
+}
+.friendInfo h4{
+    padding-left: 10px;
+    font-weight: normal;
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+}
+.friendInfo ol{
+    margin-left: 40px;
+}
+.friendInfo ol li{
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+}
+.phone-error,.password-error{
+    padding-left: 10px;
+    color: red;
+}
+.password-error+a{
+    color: #4ACF78;
+}
+.inputs+.next{
+    margin-top: 14px;
+}
+[name=code]+button{
+    border: 1px solid #4ACF78;
+    position: relative;
+    top: -40px;
+    left: 72%;
+    width: 90px;
+    height: 36px;
+    line-height: 36px;
+    background-color: #fff;
+    text-align: center;
+    color: #4ACF78;
+    outline: none;
+}
+.inputs+.submit{
+    margin-top: 14px;
+    background-color: #FF3333;
+    color: #fff;
+}
+.disabled{
+    background-color: #cccccc !important;
+}

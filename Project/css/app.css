@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-size: 14px;
+    font-family: 'Microsoft Yahei';
+}
+a{
+    text-decoration: none;
+    color: #666666;
+}
+
+
+body>div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+body>div>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.pageHeader{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #4ACF78;
+    color: #fff;
+}
+.pageBody{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 48px;
+    bottom: 48px;
+    overflow: auto;
+}
+.pageNav{
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48px;
+    background-color: #f0f0f0;
+}
+.pageNav>div{
+    flex: 1;
+}
+.pageNav>div>a{
+    display: block;
+    height: 48px;
+    text-align: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+.pageNav>div>a.actived{
+    color: #4ACF78;
+}
+.pageNav>div i{
+    display: block;
+}
+.sort-name{
+    color: #4ACF78;
+}
+
+/*提示框样式*/
+.dialog-bg{
+    position:fixed;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    background-color:rgba(0,0,0,0.3)
+}
+
+.dialog{
+    position:absolute;
+    font-size:14px;
+    color:#333;
+    width:80%;
+    left:50%; top:50%;
+    background-color: #fff;
+    transform:translate(-50%, -50%);
+}
+
+.dialog-header{
+    padding:12px;
+    font-weight:600;
+    background-color:#f0f0f0;
+    border-bottom:1px solid #ccc;
+}
+
+.dialog-body{
+    padding:12px;
+    min-height: 36px;
+    line-height: 32px;
+    color: #4ACF78;
+}
+
+.dialog-footer{
+    padding:12px;
+    text-align: right;
+    border-top:1px solid #ccc;
+}
+
+.dialog-footer button{
+    display: inline-block;
+    width:96px;
+    height:32px;
+    font-size:14px;
+    color:#333;
+    cursor:pointer;
+    background-color: #f6f6f6;
+    border:1px solid #ccc;
+}
+
+
+/*动画样式*/
+@keyframes leftIn{
+    from {
+        transform: translateX(-100%);
+    }to{
+         transform: translateX(0);
+     }
+}
+@keyframes leftOut{
+    from {
+        transform: translateX(0);
+    }to{
+         transform: translateX(-100%);
+     }
+}
+@keyframes rightIn{
+    from {
+        transform: translateX(100%);
+    }to{
+         transform: translateX(0);
+     }
+}
+@keyframes rightOut{
+    from {
+        transform: translateX(0);
+    }to{
+         transform: translateX(100%);
+     }
+}
+.left-in{
+    animation: leftIn .5s linear forwards;
+}
+.left-out{
+    animation: leftOut .5s linear forwards;
+}
+.right-out{
+    animation: rightOut .5s linear forwards;
+}
+.right-in{
+    animation: rightIn .5s linear forwards;
+}

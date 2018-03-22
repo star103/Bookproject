@@ -1,0 +1,65 @@
+.pageHeader input{
+    height: 30px;
+    outline: none;
+    border: none;
+    width: 70%;
+    padding-left: 24px;
+    position: relative;
+    top: -4px;
+}
+.pageHeader i{
+    position: relative;
+    top: -2px;
+    left: 20px;
+    z-index: 2;
+}
+.slider{
+    position: relative;
+    padding-top: 42%;
+    overflow: hidden;
+}
+.slider img{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slider>img:not(:first-child){
+    transform: translateX(100%);
+}
+.pageBody h3{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    background-color: #f0f0f0;
+    color: #666;
+    border-bottom: 1px solid #ccc;
+}
+.pageBody h3 i{
+    float: right;
+    font-size: 18px;
+    display: block;
+    margin-top: 10px;
+}
+.newBooks{
+    overflow: hidden;
+}
+.newBooks .item,.guess .item{
+    float: left;
+    width: 50%;
+    height: 182px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 28px 0;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.guess .item{
+    height: 190px;
+}
+.item img{
+    width: 50%;
+}
+.item h4{
+    font-weight: normal;
+}

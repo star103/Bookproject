@@ -1,0 +1,26 @@
+<div>
+    <div class="pageHeader"><i ng-click="goBack()" class="fa fa-arrow-left detail-back"></i>图书详情</div>
+    <div class="page-body-container">
+        <div class="bookImage">
+            <img ng-src="{{bookDetail.Book.Image}}" alt=""/>
+        </div>
+        <h3>{{bookDetail.Book.Name}}</h3>
+        <ul class="bookInfo">
+            <li><span>作者:</span>{{bookDetail.Book.Author.Name}}</li>
+            <li><span>出版社:</span>{{bookDetail.Book.Publisher.Name}}</li>
+            <li><span>出版时间:</span>{{bookDetail.Book.PublishDate}}</li>
+            <li><span>数量:</span>{{bookDetail.Number}}/{{bookDetail.Book.Amount}}本</li>
+        </ul>
+        <h3>简介</h3>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;{{bookDetail.Book.Introduce}}</p>
+    </div>
+    <div class="page-detail-bottom">
+        <div class="bookShelf" ng-click="goPageShelf()">借书架</div>
+        <div class="addbookShelf" ng-click="addShelf(bookDetail)">加入借书架</div>
+    </div>
+
+    <my-alert title="借书提示" content="库存为空,您可以先预订" state="amountState"></my-alert>
+    <my-alert title="借书提示" content="该图书已在您的借书架中" state="ownState"></my-alert>
+    <my-alert title="借书提示" content="借书成功" state="successState"></my-alert>
+    <my-alert title="借书提示" content="借书失败" state="failState"></my-alert>
+</div>

@@ -1,0 +1,25 @@
+<div>
+    <div class="pageHeader">
+        <a href="#/search"><i class="fa fa-search"></i><input type="text" placeholder="请输入图书的名字/ISBN"/></a>
+    </div>
+    <div class="pageBody">
+        <div class="slider">
+            <img ng-src="{{item.Image}}" alt="" ng-repeat="item in sliderList"/>
+        </div>
+
+        <div class="sectionItem" ng-repeat="item in bookRecom">
+            <!--bookRecomTypes[0]-->
+            <a href="#/bookList?sectionId={{item.Id}}"><h3>{{item.Name}}<i class="fa fa-angle-right"></i></h3></a>
+            <div class="newBooks">
+                <div class="item" ng-repeat="item in item.Books">
+                    <a href="#/detail?id={{item.Book.Id}}">
+                        <img ng-src="{{item.Book.Image}}" alt=""/>
+                        <h4>{{item.Book.Name}}</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <page-nav selected-index="0"></page-nav>
+
+</div>

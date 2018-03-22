@@ -1,0 +1,61 @@
+.pageHeader .removeAll{
+    position: absolute;
+    right: 18px;
+    bottom: -10px;
+    font-size: 14px;
+}
+.bookItem{
+    position: relative;
+}
+.bookItem .fa-trash-o{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    font-size: 32px;
+    color: #4ACF78;
+}
+.shelf-item-center{
+    margin-left: 40px;
+}
+
+.rad{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 45px;
+    border-radius: 50%;
+    color: #4ACF78;
+    font-size: 20px;
+}
+.chkAll{
+    top: 6px;
+    left: 18px;
+}
+
+.shelf-item-center img{
+    width: 38%;
+}
+.bookItem [type=checkbox]{
+    position: absolute;
+    top: 60px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.shelf-bottom-left,.shelf-bottom-right{
+    font-weight: bold;
+}
+.shelf-bottom-left{
+    background-color: #f0f0f0;
+    color: #666666;
+}
+.shelf-bottom-left label{
+    color: #4ACF78;
+}
+.shelf-bottom-left span{
+    display: inline-block;
+    width: 100px;
+}

@@ -1,0 +1,35 @@
+.exit{
+    position: absolute;
+    bottom: 20px;
+    display: block;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #FF3333;
+    left: 10%;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+.header{
+    display: block;
+    width: 45%;
+    margin: 20px auto;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+.readerInfo{
+    list-style: none;
+    padding: 0 20px;
+}
+.readerInfo li{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.readerInfo span{
+    color: #666;
+    margin-right: 20px;
+}

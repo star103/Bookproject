@@ -1,0 +1,14 @@
+<div>
+    <div class="pageHeader">分类</div>
+    <div class="pageBody">
+        <div class="newBooks">
+            <div class="item" ng-repeat="item in bookSortList">
+                <a href="#/bookList?categoryId={{item.Id}}">
+                    <img ng-src="{{item.Image}}" alt=""/>
+                    <h4 class="sort-name">{{item.Name}}</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <page-nav selected-index="1"></page-nav>
+</div>

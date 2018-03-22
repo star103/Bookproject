@@ -1,0 +1,26 @@
+<div>
+    <div class="pageHeader">我的</div>
+    <div class="pageBody">
+       <div class="login-log">
+           <a ng-if="!flag" href="#/login"><i class="fa fa-user-circle"></i></a>
+           <a href="#/personalCenter"><img ng-if="flag" width="40%" ng-src="{{yourHeader}}" alt=""/></a>
+           <a ng-if="!flag" href="#/login">尚未登录</a>
+           <a ng-if="flag">{{yourName}}</a>
+       </div>
+        <div class="bettween"></div>
+        <ul>
+            <li ng-click="goPageShelf()">
+                <a><i class="fa fa-book"></i>我的借书架<i class="fa fa-angle-right"></i></a><div class="shelfInfo">{{shelfInfo}}</div>
+            </li>
+            <li ng-click="goMyBorrow()"><a><i class="fa fa-history"></i>我的借阅<i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#"><i class="fa fa-edit"></i>管理地址<i class="fa fa-angle-right"></i></a></li>
+        </ul>
+        <div class="bettween"></div>
+        <ul>
+            <li><a href="#"><i class="fa fa-question-circle"></i>软件反馈<i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#"><i class="fa fa-chain"></i>常见问题<i class="fa fa-angle-right"></i></a></li>
+            <li><a href="#"><i class="fa fa-phone-square"></i>关于软件<i class="fa fa-angle-right"></i></a></li>
+        </ul>
+    </div>
+    <page-nav selected-index="3"></page-nav>
+</div>

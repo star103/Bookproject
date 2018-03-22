@@ -1,0 +1,21 @@
+<div>
+    <div class="pageHeader"><i ng-click="goBack()" class="fa fa-arrow-left detail-back"></i>图书列表</div>
+    <div class="page-body-container">
+        <div class="bookItem" ng-repeat="item in bookRecomList">
+            <a href="#detail?id={{item.Book.Id}}">
+                <img ng-src="{{item.Book.Image}}" alt=""/>
+                <div class="bookListInfo">
+                    <h4>{{item.Book.Name}}</h4>
+                    <p>{{item.Book.Author.Name}}</p>
+                    <p>{{item.Book.PublishDate}}</p>
+                    <p>{{item.Book.Publisher.Name}}</p>
+                </div>
+                <div class="fa fa-angle-right"></div>
+            </a>
+        </div>
+
+        <!--抱歉信息-->
+        <div ng-if="searchNull" class="searchNull">暂无该类图书，敬请期待............</div>
+    </div>
+
+</div>

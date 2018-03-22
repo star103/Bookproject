@@ -1,0 +1,31 @@
+<div>
+    <div class="pageHeader"><a href="#/mine" class="fa fa-mail-reply login-back" href="#"></a>登录</div>
+    <div class="page-body-container">
+        <form name="frm" novalidate>
+            <div class="inputs">
+                <i class="fa fa-user-circle"></i><input ng-model="phone" name="phone" required pattern="1[35789]\d{9}" type="text" placeholder="请输入手机号码"/>
+                <div class="phone-error" ng-show="flag||frm.phone.$dirty && frm.phone.$invalid">
+                    <div ng-show="frm.phone.$error.required">手机号码不能为空</div>
+                    <div ng-show="frm.phone.$error.pattern">手机号码格式不正确</div>
+                </div>
+                <i class="fa fa-key"></i><input ng-model="password" name="password" required pattern="\d{4}" type="text" placeholder="请输入密码"/>
+                <div class="password-error" ng-show="flag||frm.password.$dirty&&frm.password.$invalid">
+                    <div ng-show="frm.password.$error.required">密码不能为空</div>
+                    <div ng-show="frm.password.$error.pattern">密码格式不正确</div>
+                </div>
+                <a href="#/pageCode">忘记密码</a>
+            </div>
+            <button ng-click="login()" ng-class="{disabled:frm.phone.$pristine||frm.password.$pristine}" ng-disabled="frm.phone.$pristine||frm.password.$pristine">登录</button>
+        </form>
+        <div class="friendInfo">
+            <h4>友情提示:</h4>
+            <ol type="1">
+                <li>登录凭证需到市图书馆或各区分馆办理.</li>
+                <li>办理借书业务时，需要携带身份证.</li>
+                <li>......</li>
+            </ol>
+        </div>
+    </div>
+
+    <my-alert title="登录提示" content="登录失败" state="loginState"></my-alert>
+</div>

@@ -1,0 +1,30 @@
+.bookItem{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.bookItem img{
+    float: left;
+    width: 33%;
+}
+.bookItem .bookListInfo{
+    float: left;
+}
+.bookListInfo p{
+    margin-top: 10px;
+    color: #999999;
+}
+.bookItem .fa-angle-right{
+    float: right;
+    margin-top: 38px;
+    font-size: 34px;
+    color: #ccc;
+}
+.searchNull{
+    text-align: center;
+    color: #FF3333;
+    font-size: 18px;
+    margin-top: 100px;
+}

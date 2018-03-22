@@ -1,0 +1,67 @@
+/*个人中心头部*/
+.login-back{
+    position: absolute;
+    top: 16px;
+    left: 20px;
+}
+
+/*log部分*/
+.login-log{
+    margin-top: 10px;
+    text-align: center;
+    background-color: #fff;
+}
+.login-log i{
+    display: block;
+    font-size: 100px;
+}
+.login-log a{
+    display: block;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/*标签项*/
+.bettween{
+    height: 20px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+.bettween+ul{
+    padding: 0 10px;
+}
+.bettween+ul>li:first-child{
+    position: relative;
+}
+.bettween+ul>li{
+    height: 48px;
+    border-bottom: 1px solid #ccc;
+}
+.bettween+ul>li a{
+    display: block;
+    height: 100%;
+    line-height: 48px;
+}
+.bettween+ul>li .fa-angle-right{
+    float: right;
+    margin-top: 16px;
+}
+.bettween+ul>li i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.shelfInfo{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #FF3333;
+    color: #fff;
+    position: absolute;
+    right: 40px;
+    bottom: 10px;
+}

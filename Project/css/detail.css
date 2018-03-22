@@ -1,0 +1,57 @@
+.pageHeader .detail-back{
+    position: absolute;
+    top: 14px;
+    left: 10px;
+}
+.bookImage img{
+    display: block;
+    width: 60%;
+    margin: 10px auto;
+}
+.bookInfo{
+    padding: 10px;
+}
+.bookImage+h3,.bookInfo+h3{
+    color: #000;
+}
+.bookInfo li{
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+}
+.bookInfo li span{
+    color: #000;
+    display: inline-block;
+    width: 80px;
+}
+.bookInfo+h3+p{
+    color: #333;
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+.page-detail-bottom{
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 48px;
+    border-top: 1px solid #4ACF78;
+    background-color: #4ACF78;
+    color: #fff;
+}
+.page-detail-bottom>div{
+    flex: 1;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+}
+.bookShelf{
+    border-right: 1px solid #ccc;
+    background-color: #fff;
+    color: #4ACF78;
+}
+.page-body-container{
+    overflow: auto;
+    padding-bottom: 48px;
+}

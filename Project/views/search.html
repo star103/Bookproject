@@ -1,0 +1,13 @@
+<div>
+    <div class="pageHeader">
+        <a href="#/"><i class="fa fa-angle-left"></i></a>
+        <input ng-model="keyword" type="text" placeholder="请输入图书的名字/ISBN"/><i ng-click="startSearch()" class="fa fa-search"></i>
+    </div>
+    <div class="page-body-container">
+        <h3>搜索历史</h3>
+        <ul class="history-item">
+            <li ng-repeat="item in keywordArr">{{item}}</li>
+        </ul>
+        <button class="clear" ng-click="clear()">清除搜索历史</button>
+    </div>
+</div>

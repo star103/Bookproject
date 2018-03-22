@@ -1,0 +1,25 @@
+<div>
+    <div class="pageHeader"><a href="#/login" class="fa fa-mail-reply login-back" href="#"></a>重置密码</div>
+    <div class="page-body-container">
+        <form name="frm" novalidate>
+            <div class="inputs">
+                <i class="fa fa-user-circle"></i><input ng-model="phone" name="phone" required pattern="1[35789]\d{9}" type="text" placeholder="请输入手机号码"/>
+                <div class="phone-error" ng-show="flag||frm.phone.$dirty && frm.phone.$invalid">
+                    <div ng-show="frm.phone.$error.required">手机号码不能为空</div>
+                    <div ng-show="frm.phone.$error.pattern">手机号码格式不正确</div>
+                </div>
+                <!--<i class="fa fa-key"></i>-->
+                <input ng-model="code" name="code" required pattern="\d{4}" type="text" placeholder="请输入验证码"/>
+                <button ng-click="getCode()" ng-disabled="!codeFlag"><span ng-if="codeFlag">获取验证码</span><span ng-if="!codeFlag">{{count}}秒</span></button>
+                <div class="password-error" ng-show="flag||frm.code.$dirty&&frm.code.$invalid">
+                    <div ng-show="frm.code.$error.required">验证码不能为空</div>
+                    <div ng-show="frm.code.$error.pattern">验证码格式不正确</div>
+                </div>
+            </div>
+            <button class="next" ng-disabled="frm.phone.$pristine||frm.code.$pristine" ng-class="{disabled:frm.phone.$pristine||frm.password.$pristine}" ng-click="stepNext()">下一步</button>
+        </form>
+    </div>
+    <my-alert title="获取验证码提示" content="请先输入手机号码" state="codeIsShow"></my-alert>
+    <my-alert title="获取验证码提示" content="获取验证码失败" state="codeErrShow"></my-alert>
+    <my-alert title="获取验证码提示" content="验证码验证失败" state="codeConfirmShow"></my-alert>
+</div>

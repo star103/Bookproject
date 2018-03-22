@@ -1,0 +1,51 @@
+<div>
+    <div class="pageHeader"><a href="#/mine" class="fa fa-mail-reply login-back" href="#"></a>借阅记录</div>
+    <div class="page-body-container">
+        <div class="borrowOption">
+            <div class="currentBorrow" ng-class="{borrowActive:borrowFlag}" ng-click="showCurrentBorrow()">当前借阅</div>
+            <div class="historyBorrow" ng-class="{borrowActive:!borrowFlag}" ng-click="showHistoryBorrow()">借阅历史</div>
+        </div>
+        <!--当前借阅页面-->
+        <div ng-if="borrowFlag">
+            <div class="bookItem" ng-repeat="item in borrowRecords">
+                <div class="orderNum">
+                    <p>订单编号：</p>{{item.BorrowNumber}}
+                    <span>{{showState(item.State)}}</span>
+                </div>
+                <a href="#detail?id={{item.BookId}}">
+                    <img ng-src="{{item.BookImage}}" alt=""/>
+                    <div class="bookListInfo">
+                        <h4>{{item.BookName}}</h4>
+                        <p>{{item.AuthorName}}</p>
+                        <p>{{item.PublisherName}}</p>
+                    </div>
+                    <div class="fa fa-angle-right"></div>
+                </a>
+                <div class="cancelOrder" ng-if="item.State==1" ng-click="cancelOrder(item)">取消订单</div>
+                <div class="confirmOrder" ng-if="item.State==2" ng-click="confirmOrder(item)">确认收货</div>
+            </div>
+        </div>
+
+
+        <!--历史借阅页面-->
+        <div ng-if="!borrowFlag">
+            <div class="bookItem" ng-repeat="item in borrowSuccessRecords">
+                <div class="orderNum">
+                    <p>订单编号：</p>{{item.BorrowNumber}}
+                    <span>{{showState(item.State)}}</span>
+                </div>
+                <a href="#detail?id={{item.BookId}}">
+                    <img ng-src="{{item.BookImage}}" alt=""/>
+                    <div class="bookListInfo">
+                        <h4>{{item.BookName}}</h4>
+                        <p>{{item.AuthorName}}</p>
+                        <p>{{item.PublisherName}}</p>
+                    </div>
+                    <div class="fa fa-angle-right"></div>
+                </a>
+                <div class="cancelOrder" ng-if="item.State==0||item.State==1">已取消</div>
+                <div class="confirmOrder" ng-if="item.State==4">已归还</div>
+            </div>
+        </div>
+    </div>
+</div>

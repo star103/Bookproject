@@ -1,0 +1,42 @@
+<div>
+    <div class="pageHeader">
+        <i ng-click="goBack()" class="fa fa-arrow-left detail-back"></i>借书架
+        <span class="removeAll" ng-click="removeAllBook()">清空</span>
+    </div>
+    <div class="pageBody">
+        <div class="bookItem" ng-repeat="item in myBooks">
+            <!--ng-repeat="item in bookRecomList"-->
+            <!--<a href="#detail?id={{item.Book.Id}}">-->
+
+            <!--<input type="checkbox" name="chk"/><label></label>-->
+                <div class="rad" ng-click="changeRadio(item)">
+                    <div ng-if="item.correct">√</div>
+                </div>
+
+               <div class="shelf-item-center">
+                   <img ng-src="{{item.Book.Image}}" alt=""/>
+                   <div class="bookListInfo">
+                       <h4>{{item.Book.Name}}</h4>
+                       <p>{{item.Book.Author.Name}}</p>
+                       <p>{{item.Book.PublishDate}}</p>
+                       <p>{{item.Book.Publisher.Name}}</p>
+                   </div>
+               </div>
+                <div class="fa fa-trash-o fa-fw" ng-click="removeBookItem(item.Book.Id)"></div>
+            <!--</a>-->
+        </div>
+    </div>
+
+    <div class="page-detail-bottom">
+        <div class="bookShelf shelf-bottom-left">
+            <div class="rad chkAll" ng-click="changeChkAll()">
+                <div ng-if="chkAll">√</div>
+            </div>
+            <!--<input type="checkbox" id="chkAll"/><label for="chkAll">全选</label>-->
+            <span>合计：{{allBook}}本</span>
+        </div>
+        <div class="addbookShelf shelf-bottom-right" ng-click="submitOrder()">提交订单</div>
+    </div>
+
+    <my-alert title="借书架提示" content="借书架空空如也" state="nullState"></my-alert>
+</div>
